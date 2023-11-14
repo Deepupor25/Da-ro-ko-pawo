@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            align-items: center;
+            text-align: center;
+        }
+        .main h1{
+            font: 800;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        .main h2{
+            font: 700;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <button onclick="back()"><iconify-icon icon="bx:bulb" style="color: green;" width="64" height="64"></iconify-icon></button><h1>Da ro, ko pawo</h1>        
+
+        <h2>Stand a chance to win up to N500 with just N100 by taking a lucky guess from 0 to 9</h2>
+        <input id="input1" type="text" placeholder="Type any number from 0-9" style="padding: 10px; border: none; border-radius: 10px; width: 300px; height: 55px;">
+        <button onclick="display()" style="padding: 10px; border: none; border-radius: 7px;"><h2>Confirm Computer Guess</h2></button>
+    </main>
+    <main>
+    </main>
+</body>
+</html>
+
+
+<script>
+    let input1 = document.getElementById('input1')
+    function display(){
+        let random = Math.floor(Math.random() * 10)
+        input1.value == random ? alert ("You are right") : alert ("You are wrong")
+        console.log(random);
+    }
+    document.body.style.backgroundColor = 'black'
+    function back(){
+        document.body.style.backgroundColor == 'green' ? document.body.style.backgroundColor = 'black' : document.body.style.backgroundColor = 'green'
+    }
+    
+
+</script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
